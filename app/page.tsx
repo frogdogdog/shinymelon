@@ -14,7 +14,7 @@ export default async function Home() {
       </p>
       <h2 style={{ color: '#2A7B8C', marginTop: '2rem' }}>Select a Grade</h2>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '1rem' }}>
-        {grades.map(grade => (
+        {(grades || []).map(grade => (
           <div key={grade.id} style={{
             background: '#FCE8DF',
             border: '2px solid #E8845A',
