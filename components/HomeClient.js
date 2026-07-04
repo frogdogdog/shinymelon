@@ -40,15 +40,25 @@ export default function HomeClient({ worksheets }) {
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <img
             src="https://tvimmduaznytpjpbwfiw.supabase.co/storage/v1/object/public/assets/watermelon-rays.png"
-            style={{ width: '36px', height: '36px', objectFit: 'contain' }}
+            style={{ width: '75px', height: '75px', objectFit: 'contain' }}
             alt="ShinyMelon"
           />
-          <span style={{
-            fontFamily: 'Grandstander, cursive',
-            fontWeight: '900',
-            fontSize: '1.4rem',
-            color: '#E8845A',
-          }}>ShinyMelon</span>
+          <div>
+            <div style={{
+              fontFamily: 'Grandstander, cursive',
+              fontWeight: '900',
+              fontSize: '1.4rem',
+              color: '#E8845A',
+              lineHeight: '1.1',
+            }}>ShinyMelon</div>
+            <div style={{
+              fontFamily: 'Grandstander, cursive',
+              fontSize: '10px',
+              color: '#2A7B8C',
+              letterSpacing: '0.08em',
+              fontWeight: '700',
+            }}>for curious minds</div>
+          </div>
         </div>
         <div style={{ display: 'flex', gap: '1.5rem', fontSize: '14px', color: '#666' }}>
           <span style={{ cursor: 'pointer' }}>Worksheets</span>
@@ -60,33 +70,44 @@ export default function HomeClient({ worksheets }) {
       {/* Hero */}
       <div style={{
         background: 'linear-gradient(135deg, #E8845A 0%, #d4693d 100%)',
-        padding: '4rem 2rem 3rem',
+        padding: '2rem 2rem 2.5rem',
         textAlign: 'center',
       }}>
-        <img
-          src="https://tvimmduaznytpjpbwfiw.supabase.co/storage/v1/object/public/assets/watermelon-rays.png"
-          style={{ width: '90px', height: '90px', objectFit: 'contain', marginBottom: '1rem' }}
-          alt="ShinyMelon mascot"
-        />
-        <h1 style={{
-          fontFamily: 'Grandstander, cursive',
-          fontWeight: '900',
-          fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-          color: 'white',
-          margin: '0 0 0.75rem',
-          lineHeight: '1.1',
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '16px',
+          marginBottom: '1rem',
+          flexWrap: 'wrap',
         }}>
-          Math Worksheets Kids Love
-        </h1>
+          <img
+            src="https://tvimmduaznytpjpbwfiw.supabase.co/storage/v1/object/public/assets/watermelon-rays.png"
+            style={{ width: '70px', height: '70px', objectFit: 'contain', flexShrink: 0 }}
+            alt="ShinyMelon mascot"
+          />
+          <h1 style={{
+            fontFamily: 'Grandstander, cursive',
+            fontWeight: '900',
+            fontSize: 'clamp(1.4rem, 3.5vw, 2.6rem)',
+            color: 'white',
+            margin: 0,
+            lineHeight: '1.1',
+            textAlign: 'left',
+            whiteSpace: 'nowrap',
+          }}>
+            Math Worksheets Kids Love
+          </h1>
+        </div>
         <p style={{
           color: 'rgba(255,255,255,0.9)',
-          fontSize: '1.1rem',
+          fontSize: '1.05rem',
           maxWidth: '520px',
-          margin: '0 auto 2rem',
+          margin: '-0.25rem auto 1.5rem',
           lineHeight: '1.6',
         }}>
-          Free printable math worksheets for PK–8th grade. Aligned to Common Core.
-          Designed for easy reading. No login required.
+          Printable math worksheets for K–8th grade. Aligned to Common Core.
+          Designed to keep kids interested in learning for life.
         </p>
 
         <div style={{
@@ -153,7 +174,7 @@ export default function HomeClient({ worksheets }) {
               Coming soon!
             </div>
             <div style={{ fontSize: '14px' }}>
-              We're adding worksheets for this grade. Check back soon.
+              We are adding worksheets for this grade. Check back soon.
             </div>
           </div>
         ) : (
@@ -185,11 +206,14 @@ export default function HomeClient({ worksheets }) {
         }}>
           ShinyMelon
         </div>
-        <div style={{ fontSize: '13px', opacity: 0.8, marginBottom: '0.5rem' }}>
+        <div style={{ fontSize: '13px', opacity: 0.8, marginBottom: '0.25rem' }}>
+          for curious minds
+        </div>
+        <div style={{ fontSize: '13px', opacity: 0.7, marginBottom: '0.5rem' }}>
           Learn · Grow · Explore
         </div>
         <div style={{ fontSize: '12px', opacity: 0.6 }}>
-          © {new Date().getFullYear()} ShinyMelon · Free math worksheets for PK–8th grade
+          © {new Date().getFullYear()} ShinyMelon · Free math worksheets for K–8th grade
         </div>
       </footer>
 
