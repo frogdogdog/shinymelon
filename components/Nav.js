@@ -40,7 +40,7 @@ export default function Nav() {
         </div>
       </button>
       <div style={{ display: 'flex', gap: '1.5rem', fontSize: '14px', color: '#666' }}>
-        <button onClick={() => window.location.href = '/'} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '14px', color: '#666' }}>Worksheets</button>
+        <button onClick={() => window.location.href = '/math'} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '14px', color: '#666' }}>Worksheets</button>
         <button style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '14px', color: '#666' }}>For Teachers</button>
         <button style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '14px', color: '#666' }}>About</button>
         <button style={{ background: '#E8845A', color: 'white', border: 'none', borderRadius: '8px', padding: '6px 16px', fontSize: '13px', fontWeight: '700', cursor: 'pointer', fontFamily: 'Grandstander, cursive' }}>Sign Up Free</button>
