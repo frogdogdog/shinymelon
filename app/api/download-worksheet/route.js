@@ -1,3 +1,4 @@
+import { join } from 'path'
 import { renderToBuffer } from '@react-pdf/renderer'
 import { createClient } from '@supabase/supabase-js'
 import { WorksheetPDF } from '../../../lib/pdf-worksheet.js'
@@ -8,6 +9,8 @@ const supabase = createClient(
 )
 
 export async function GET(request) {
+  console.log('cwd:', process.cwd())
+console.log('font path:', join(process.cwd(), 'public/fonts/Atkinson-Regular.ttf'))
   const { searchParams } = new URL(request.url)
   const worksheetId = searchParams.get('id')
   const isPrint = searchParams.get('print') === 'true'

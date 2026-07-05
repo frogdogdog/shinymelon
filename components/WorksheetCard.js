@@ -9,16 +9,26 @@ export default function WorksheetCard({ worksheet }) {
   }
 
   return (
-    <div style={{
-      background: 'white',
-      border: '1.5px solid #F0F0F0',
-      borderRadius: '16px',
-      padding: '1.25rem',
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '0.75rem',
-      boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-    }}>
+    <div
+      onClick={() => {
+        const node = worksheet.skill_nodes
+        const domain = node?.clusters?.domains
+        if (domain) {
+          window.location.href = `/math/${domain.grade_id.toLowerCase()}/${domain.code.toLowerCase()}/${node.code.toLowerCase().replace(/\./g, '-')}`
+        }
+      }}
+      style={{
+        background: 'white',
+        border: '1.5px solid #F0F0F0',
+        borderRadius: '16px',
+        padding: '1.25rem',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '0.75rem',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+        cursor: 'pointer',
+        transition: 'box-shadow 0.2s, transform 0.1s',
+      }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
         <span style={{
           background: '#FCE8DF',
