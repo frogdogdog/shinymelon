@@ -15,7 +15,7 @@ const supabase = createClient(
   { realtime: { transport: ws } }
 )
 
-const BATCH_SIZE = 5
+const BATCH_SIZE = 50
 
 async function generateWorksheet(subSkill, node, cluster, domain) {
   const grade = domain.grade_id === 'K' ? 'Kindergarten' : `${domain.grade_id}st Grade`
