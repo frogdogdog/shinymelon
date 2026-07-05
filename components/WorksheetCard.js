@@ -11,12 +11,14 @@ export default function WorksheetCard({ worksheet }) {
   return (
     <div
       onClick={() => {
-        const node = worksheet.skill_nodes
-        const domain = node?.clusters?.domains
-        if (domain) {
-          window.location.href = `/math/${domain.grade_id.toLowerCase()}/${domain.code.toLowerCase()}/${node.code.toLowerCase().replace(/\./g, '-')}`
-        }
-      }}
+  const node = worksheet.skill_nodes
+  const domain = node?.clusters?.domains
+  console.log('node:', node)
+  console.log('domain:', domain)
+  if (domain?.grade_id && domain?.code && node?.code) {
+    window.location.href = `/math/${domain.grade_id.toLowerCase()}/${domain.code.toLowerCase()}/${node.code.toLowerCase().replace(/\./g, '-')}`
+  }
+}}
       style={{
         background: 'white',
         border: '1.5px solid #F0F0F0',

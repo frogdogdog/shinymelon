@@ -12,7 +12,7 @@ export default async function Home() {
     .select(`
       id, title, skill_url, copyright_year,
       skill_nodes (
-        name, cc_standard,
+        name, code, cc_standard,
         clusters (
           name,
           domains (

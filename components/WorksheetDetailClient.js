@@ -1,4 +1,5 @@
 'use client'
+import Nav from './Nav'
 import { useState } from 'react'
 
 const DIFFICULTY_LABEL = ['', 'Introduction', 'Practice', 'Challenge']
@@ -24,48 +25,7 @@ export default function WorksheetDetailClient({ skillNode, subSkills, relatedNod
   return (
     <div style={{ fontFamily: 'Atkinson Hyperlegible, sans-serif', minHeight: '100vh', background: '#FAFAFA' }}>
 
-      {/* Nav */}
-      <nav style={{
-        background: 'white',
-        borderBottom: '1px solid #F0F0F0',
-        padding: '0 2rem',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        height: '64px',
-        position: 'sticky',
-        top: 0,
-        zIndex: 100,
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <img
-            src="https://tvimmduaznytpjpbwfiw.supabase.co/storage/v1/object/public/assets/watermelon-rays.png"
-            style={{ width: '52px', height: '52px', objectFit: 'contain' }}
-            alt="ShinyMelon"
-          />
-          <div>
-            <div style={{
-              fontFamily: 'Grandstander, cursive',
-              fontWeight: '900',
-              fontSize: '1.4rem',
-              color: '#E8845A',
-              lineHeight: '1.1',
-            }}>ShinyMelon</div>
-            <div style={{
-              fontFamily: 'Grandstander, cursive',
-              fontSize: '10px',
-              color: '#2A7B8C',
-              letterSpacing: '0.08em',
-              fontWeight: '700',
-            }}>for curious minds</div>
-          </div>
-        </div>
-        <button
-          onClick={() => window.location.href = '/'}
-          style={{ fontSize: '14px', color: '#666', background: 'none', border: 'none', cursor: 'pointer' }}>
-          Back to worksheets
-        </button>
-      </nav>
+      <Nav />
 
       {/* Breadcrumb */}
       <div style={{

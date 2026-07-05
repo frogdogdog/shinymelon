@@ -1,4 +1,5 @@
 'use client'
+import Nav from './Nav'
 import { useState } from 'react'
 import WorksheetCard from './WorksheetCard'
 
@@ -24,48 +25,7 @@ export default function HomeClient({ worksheets }) {
   return (
     <div style={{ fontFamily: 'Atkinson Hyperlegible, sans-serif', minHeight: '100vh', background: '#FAFAFA' }}>
 
-      {/* Nav */}
-      <nav style={{
-        background: 'white',
-        borderBottom: '1px solid #F0F0F0',
-        padding: '0 2rem',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        height: '64px',
-        position: 'sticky',
-        top: 0,
-        zIndex: 100,
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <img
-            src="https://tvimmduaznytpjpbwfiw.supabase.co/storage/v1/object/public/assets/watermelon-rays.png"
-            style={{ width: '75px', height: '75px', objectFit: 'contain' }}
-            alt="ShinyMelon"
-          />
-          <div>
-            <div style={{
-              fontFamily: 'Grandstander, cursive',
-              fontWeight: '900',
-              fontSize: '1.4rem',
-              color: '#E8845A',
-              lineHeight: '1.1',
-            }}>ShinyMelon</div>
-            <div style={{
-              fontFamily: 'Grandstander, cursive',
-              fontSize: '10px',
-              color: '#2A7B8C',
-              letterSpacing: '0.08em',
-              fontWeight: '700',
-            }}>for curious minds</div>
-          </div>
-        </div>
-        <div style={{ display: 'flex', gap: '1.5rem', fontSize: '14px', color: '#666' }}>
-          <span style={{ cursor: 'pointer' }}>Worksheets</span>
-          <span style={{ cursor: 'pointer' }}>For Teachers</span>
-          <span style={{ cursor: 'pointer' }}>About</span>
-        </div>
-      </nav>
+      <Nav />
 
       {/* Hero */}
       <div style={{

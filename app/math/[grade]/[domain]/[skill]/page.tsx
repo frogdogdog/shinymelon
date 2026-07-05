@@ -14,7 +14,9 @@ export default async function WorksheetDetailPage({
     process.env.SUPABASE_SERVICE_ROLE_KEY!
   )
 
-  const skillCode = skill.toUpperCase().replace(/-/g, '.')
+  // Preserve case for the last segment (e.g. K.OA.1a not K.OA.1A)
+const parts = skill.split('-')
+const skillCode = parts.map((p, i) => i < parts.length - 1 ? p.toUpperCase() : p).join('.')
 
   const { data: skillNode } = await supabase
     .from('skill_nodes')
