@@ -66,8 +66,8 @@ export default function HomeClient({ worksheets }) {
           margin: '-0.25rem auto 1.5rem',
           lineHeight: '1.6',
         }}>
-          Printable math worksheets for K–8th grade. Aligned to Common Core.
-          Designed to keep kids interested in learning for life.
+          Worksheets, activities, and games for K-8th grade — starting with math.
+          Common Core aligned. Designed to keep kids curious for life.
         </p>
 
         <div style={{

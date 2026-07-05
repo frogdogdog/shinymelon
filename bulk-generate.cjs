@@ -61,7 +61,7 @@ Respond ONLY with a valid JSON object — no markdown, no backticks, no explanat
 
   const message = await anthropic.messages.create({
     model: 'claude-sonnet-4-6',
-    max_tokens: 1024,
+    max_tokens: 2048,
     messages: [{ role: 'user', content: prompt }],
   })
 

@@ -2,8 +2,16 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ShinyMelon — Free Math Worksheets for Kids",
-  description: "Free printable math worksheets for PK–8th grade. Common Core aligned. Designed for accessibility.",
+  title: 'Learning for Kids K-8 | ShinyMelon',
+  description: 'Worksheets, interactive activities, quizzes, and games for Kindergarten through 8th grade. Math, reading, writing, science and more. Common Core aligned. Designed to keep kids curious.',
+  keywords: 'free worksheets, kindergarten worksheets, common core, printable worksheets, homeschool, math worksheets, reading worksheets, kids learning games, interactive worksheets',
+  openGraph: {
+    title: 'Learning for Kids K-8 | ShinyMelon',
+    description: 'Worksheets, interactive activities, quizzes, and games for K-8. Math, reading, writing, science and more.',
+    url: 'https://shinymelon.com',
+    siteName: 'ShinyMelon',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
