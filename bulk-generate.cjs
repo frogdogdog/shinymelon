@@ -3,6 +3,7 @@ const { createClient } = require('@supabase/supabase-js')
 const { config } = require('dotenv')
 const { resolve } = require('path')
 const ws = require('ws')
+const { generateThumbnail } = require('./lib/generate-thumbnail.cjs')
 
 config({ path: resolve(process.cwd(), '.env.local') })
 

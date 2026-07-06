@@ -10,7 +10,7 @@ export default async function Home() {
   const { data: worksheets } = await supabase
     .from('worksheets')
     .select(`
-      id, title, skill_url, copyright_year,
+      id, title, skill_url, copyright_year, thumbnail_url,
       skill_nodes (
         name, code, cc_standard,
         clusters (
